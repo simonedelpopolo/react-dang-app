@@ -1,0 +1,9 @@
+public/js/*
+public/index.html
+.git/
+.github/
+.gitignore
+.idea
+.npmrc
+.eslintrc
+.eslintignore
