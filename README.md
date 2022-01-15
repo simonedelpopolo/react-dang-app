@@ -72,7 +72,10 @@ ___
 `cp -rf ./node_modules/@react-dang/app/* ./ # copy the content of the package in your root directory`
 
 > ℹ Keeping the module, in the node_modules directory, could be practical in case is needed a restore.
-> remove it `rm -rf ./node_modules/@react-dang`
+
+remove it with `rm -rf ./node_modules/@react-dang`
+
+`npm install # install the required devDependencies and dependencies`
 
 `npm run build-dev # this will watch for file changes and it will compile once saved.`
 
