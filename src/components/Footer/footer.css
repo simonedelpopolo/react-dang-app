@@ -1,0 +1,26 @@
+.footer{
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.31);
+    backdrop-filter: blur(4px);
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    margin-top: 1.5%;
+}
+
+.footer > div{
+    padding: 0.5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.footer > div #github{
+    margin-left: 15px;
+    flex: 1 1 available;
+}
+
+.footer > div #npmjs{
+    margin-left: 15px;
+    flex: 1 1 auto;
+}
