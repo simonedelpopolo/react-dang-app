@@ -1,0 +1,29 @@
+.links{
+    padding: 0.5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.links > a{
+    flex: auto;
+    justify-content: space-evenly;
+    align-self: center;
+    border-radius: 3px;
+}
+
+.links > a > div{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.links > a > img{
+    flex: 0 1 auto;
+    justify-content: flex-start;
+}
