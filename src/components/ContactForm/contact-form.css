@@ -1,0 +1,77 @@
+input{
+    font-family: 'Raleway', sans-serif;
+}
+.contact-form{
+    border: 1px dotted rgba(98, 218, 251, 0.85);
+    border-radius: 5px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 10% 75% auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "name-label name-input name-input"
+    "email-label email-input email-input"
+    ". . submit-dang";
+    padding: 1%;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    font-size: 1.1rem;
+}
+
+.styling-labels{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 1px solid rgba(31, 35, 42, 0.45);
+    background-color: rgba(98, 218, 251, 0.85);
+    color: rgba(31, 35, 42, 1);
+    font-size: 1rem;
+    height: 30px;
+}
+
+.error-styling-labels{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 1px solid rgba(194, 207, 255, 0.45);
+    background-color: rgba(145, 0, 58, 0.85);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    height: 30px;
+}
+
+.styling-inputs-text{
+    height: 30px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid rgba(31, 35, 42, 0.45);
+}
+
+.error-styling-inputs-text{
+    height: 30px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px double rgba(145, 0, 58, 0.85);
+}
+
+.name-label{
+    grid-area: name-label;
+}
+
+.name-input{
+    grid-area: name-input;
+    margin-bottom: 10px;
+}
+
+.email-label{
+    grid-area: email-label;
+}
+
+.email-input{
+    grid-area: email-input;
+    margin-bottom: 10px;
+}
+
+.submit-dang{
+    grid-area: submit-dang;
+}
