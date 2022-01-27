@@ -14,6 +14,8 @@ export default web_pack = {
         'ReactDangApp': './src/ReactDangApp.jsx',
         'Index': './src/components/Index.jsx',
         'Contacts': './src/components/Contacts.jsx',
+        'NotFound': './src/components/NotFound.jsx',
+        'ContactForm': './src/components/ContactForm/ContactForm.jsx',
         'Footer': './src/components/Footer/Footer.jsx',
         'Header': './src/components/Header/Header.jsx',
         'Links': './src/components/Header/Links/Links.jsx',
@@ -36,6 +38,9 @@ export default web_pack = {
                         '@babel/env',
                         '@babel/react',
                     ],
+                    plugins: [
+                        '@babel/transform-runtime'
+                    ]
                 },
             },
             {

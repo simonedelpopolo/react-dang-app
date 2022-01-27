@@ -1,6 +1,7 @@
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import TerserPlugin from 'terser-webpack-plugin'
 import { dirname, resolve } from 'path'
 
 const __dirname = dirname( new URL( import.meta.url ).pathname )
@@ -13,12 +14,27 @@ export default web_pack = {
         'ReactDangApp': './src/ReactDangApp.jsx',
         'Index': './src/components/Index.jsx',
         'Contacts': './src/components/Contacts.jsx',
+        'NotFound': './src/components/NotFound.jsx',
+        'ContactForm': './src/components/ContactForm/ContactForm.jsx',
         'Footer': './src/components/Footer/Footer.jsx',
         'Header': './src/components/Header/Header.jsx',
         'Links': './src/components/Header/Links/Links.jsx',
     },
     devtool: 'inline-source-map',
     mode: 'production',
+    optimization: {
+        minimize: true,
+        minimizer: [ new TerserPlugin( {
+            parallel: true,
+            terserOptions: {
+                format: {
+                    comments: false,
+                },
+                ecma: 'latest',
+            },
+            extractComments: false,
+        } ) ],
+    },
     module: {
         rules: [
             {
@@ -30,6 +46,9 @@ export default web_pack = {
                         '@babel/env',
                         '@babel/react',
                     ],
+                    plugins: [
+                        '@babel/transform-runtime'
+                    ]
                 },
             },
             {
