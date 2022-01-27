@@ -16,14 +16,16 @@ ___
 
 ### Description
 
-The ReactDang Application is an npmjs package that will initialize a Basic React Web Application having two default pages to start working with.  
-Home page and the contacts page.
+The ReactDang Application is a npmjs package that will initialize a Basic React Web Application having two default pages to start working with.  
+Home page and a Contacts page.
 
-It uses Babel under the hood to compile the React Application.
-It spins up webpack with two default configurations:
+It uses:
+- Babel under the hood to compile the React Application.
+- eslint for linting.
+- It spins up webpack with two default configurations:
 
-- Development -> It builds the javascripts specifically for webpack devServer.
-- Production -> It builds the app with some performance improvements.
+  - Development -> It builds the javascript specifically for webpack devServer.
+  - Production -> It builds the app with some performance improvements.
 
 Available Components:
 
@@ -31,31 +33,45 @@ Available Components:
 - Links -> Handles the available links of the web application. It is imported in the Header.
 - Index -> Handles the Home Page.
 - Contacts -> Handles the Contacts Page.
-- ContactForm -> Basic contact form ⚠ Necessary from the developer to project the business logic of it, in particular DB and server side. It si imported in the Contacts.
+- ContactForm -> Basic contact form. It is imported in the Contacts.
+  - ⚠ Necessary from the developer to project the business logic of it, in particular DB and server side.
 - Footer -> Handles the footer shared between the web application pages.
 
-#### The serve library
+___
+
+- #### The serve library
 
 This is a personal experimental server to serve the React generated code.  
 I have noticed a much better resource consumption, in terms of CPU and RAM by using a self-created library instead of using webpack serve function.  
-In certain cases I saw a 70% less resource usage.  
-> ⚠ Consider this ABSOLUTELY not ready for production enviroment but try it out for testing and profiling.
+In certain cases I saw a 70% less resource usage.
+> ⚠ Consider this ABSOLUTELY not ready for production environment but try it out for testing and profiling.
 
 > ℹ use it with production compiled React because it lacks of the socket connection to handle the hot and live reload provided by webpack devServer
 
-`npm run build-serve.server-alpha # this script will compile production and launche the serve library`
+- Spin up the alpha server library.
+```shell 
+npm run build-serve.server-alpha 
+# this script will compile the production and launch the serve library`
 
-`node ./lib/serve.js # if you like it ;)`
+# OR
+npm run build-prod # ℹ CTRL+c to stop watching
+
+node ./lib/serve.js # if you like it ;)
+
+# ℹ open the browser at http://localhost:3000
+
+```
 
 ```javascript
+// ℹ to modify the port of the serve library
 // file ./lib/index.js
-// around line 52 you can modify the port if needed
+// around line 52 you can modify port and address if needed
 
 server.listen( 3001, '0.0.0.0', null,
-    () => {
-        console.log( server.address() )
-        console.log( `http://${ server.address().address }:${ server.address().port }` )
-    } 
+        () => {
+          console.log( server.address() )
+          console.log( `http://${ server.address().address }:${ server.address().port }` )
+        }
 )
 ```
 
@@ -65,44 +81,65 @@ ___
 
 ##### Manual
 
-`npm info @react-dang/app # get the latest alpha version`
+```shell
 
-`npm install @react-dang/app@0.x.x-alpha # replace the major and minor with latest alpha release`
+mkdir my-project
+cd my-project
 
-`cp -rf ./node_modules/@react-dang/app/* ./ # copy the content of the package in your root directory`
+npm install @react-dang/app
+
+cp -rf ./node_modules/@react-dang/app/* ./ 
+# copy the content of the package, (node_modules directory) into your project root directory
+
+```
 
 > ℹ Keeping the module, in the node_modules directory, could be practical in case is needed a restore.
 
 remove it with `rm -rf ./node_modules/@react-dang`
 
-`npm install # install the required devDependencies and dependencies`
+```shell
 
-`npm run build-dev # this will watch for file changes and it will compile once saved.`
+npm install # install the required devDependencies and dependencies
 
-> ℹ open another terminal
+npm run build-dev # this will watch for file changes and it will compile once saved.
 
-`npm run serve-dev`
+# ℹ open another terminal
 
-> ℹ open your broser to http://localhost:3000 
-> if you need to use another port, set it in the webpack.dev.config.js property devServer
+npm run serve-dev
+
+# ℹ open your broser to http://localhost:3000 
+
+```
+
+> to use another port, set it in the webpack.dev.config.js, property devServer
 
 ##### Automated
 
 It's possible to automate the installation using [react-dang](https://github.com/simonedelpopolo/react-dang/tree/v0.0.x)
 
-`npm info react-dang # get the latest tag alpha`
+```shell
 
-`npx react-dang@0.x.x 'your-react-application-name' # replace the major and minor with latest alpha release`
+mkdir my-project
+cd my-project
 
-> ℹ react-dang deletes the module complitely
+npx react-dang install --name='my-react-app' --directory='my-react-app'
 
-`npm run build-dev # this will watch for file changes and it will compile once saved.`
+```
 
-> ℹ open another terminal
+> ℹ react-dang deletes the module @react-dang/app completely from the hard drive.
 
-`npm run serve-dev`
+```shell
 
-> ℹ open your broser to http://localhost:3000 
-> if you need to use another port, set it in the webpack.dev.config.js property devServer
+cd my-react-app
+npm run build-dev 
+# this will watch for file changes and it will compile once saved.
 
+# ℹ open another terminal
+npm run serve-dev
+# ℹ open the browser at http://localhost:3000
+```
+
+> ℹ The simplest usage `npx react-dang i`  
+> _It will generate the project-name and the directory_
 ___
+
