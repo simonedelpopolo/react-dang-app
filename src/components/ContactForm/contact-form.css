@@ -8,16 +8,23 @@ input{
     margin: auto;
     display: grid;
     grid-gap: 0;
-    grid-template-columns: 10% 75% auto;
+    grid-template-columns: 11% 75% auto;
     grid-template-rows: auto;
     grid-template-areas:
+    "message-sent message-sent message-sent"
     "name-label name-input name-input"
     "email-label email-input email-input"
+    "body-label body-teaxt-area body-teaxt-area"
     ". . submit-dang";
     padding: 1%;
     font-family: 'Raleway', sans-serif;
     line-height: 1.5em;
     font-size: 1.1rem;
+}
+
+.message-sent{
+    grid-area: message-sent;
+    margin-bottom: 0.5%;
 }
 
 .styling-labels{
@@ -47,11 +54,34 @@ input{
     border: 1px solid rgba(31, 35, 42, 0.45);
 }
 
+.styling-text-area{
+    height: 60px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid rgba(31, 35, 42, 0.45);
+}
+
 .error-styling-inputs-text{
     height: 30px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     border: 1px double rgba(145, 0, 58, 0.85);
+}
+
+.error-styling-text-area{
+    height: 60px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px double rgba(145, 0, 58, 0.85);
+}
+
+.message-top{
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 3px;
+    background-color: rgba(40, 89, 0, 0.75);
+    color: rgb(255, 255, 255);
+    width: 100%;
 }
 
 .name-label{
@@ -69,6 +99,15 @@ input{
 
 .email-input{
     grid-area: email-input;
+    margin-bottom: 10px;
+}
+
+.body-label{
+    grid-area:body-label;
+}
+
+.body-text-area{
+    grid-area: body-teaxt-area;
     margin-bottom: 10px;
 }
 
