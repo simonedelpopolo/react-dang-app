@@ -7,3 +7,5 @@ public/index.html
 .npmrc
 .eslintrc
 .eslintignore
+/index.js
+/middleware.js

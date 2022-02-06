@@ -7,17 +7,17 @@ ___
 ## Index of Contents
 
 - [Description](#description)
-  - [The serve library](#the-serve-library)
 - [Installation](#installation)
   - [Manual](#manual)
-  - [react-dang](#automated) 
+  - [react-dang](#automated)
+- [JetBrains OSS Licence](#jetbrains-oss-license)
 
 ___
 
 ### Description
 
 The ReactDang Application is a npmjs package that will initialize a Basic React Web Application having two default pages to start working with.  
-Home page and a Contacts page.
+The Home Page and the Contacts page.
 
 It uses:
 - Babel under the hood to compile the React Application.
@@ -32,48 +32,12 @@ Available Components:
 - Header -> Handles the header shared between the web application pages.
 - Links -> Handles the available links of the web application. It is imported in the Header.
 - Index -> Handles the Home Page.
+- NotFound -> Handles 404
 - Contacts -> Handles the Contacts Page.
 - ContactForm -> Basic contact form. It is imported in the Contacts.
-  - ⚠ Necessary from the developer to project the business logic of it, in particular DB and server side.
+  - ⚠ When using webpack serve function, it is necessary to project the business logic of it, in particular DB and server side. 
+  - ℹ When using the serve library, one route call message handles the fetch request from the ContactForm.
 - Footer -> Handles the footer shared between the web application pages.
-
-___
-
-- #### The serve library
-
-This is a personal experimental server to serve the React generated code.  
-I have noticed a much better resource consumption, in terms of CPU and RAM by using a self-created library instead of using webpack serve function.  
-In certain cases I saw a 70% less resource usage.
-> ⚠ Consider this ABSOLUTELY not ready for production environment but try it out for testing and profiling.
-
-> ℹ use it with production compiled React because it lacks of the socket connection to handle the hot and live reload provided by webpack devServer
-
-- Spin up the alpha server library.
-```shell 
-npm run build-serve.server-alpha 
-# this script will compile the production and launch the serve library`
-
-# OR
-npm run build-prod # ℹ CTRL+c to stop watching
-
-node ./lib/serve.js # if you like it ;)
-
-# ℹ open the browser at http://localhost:3000
-
-```
-
-```javascript
-// ℹ to modify the port of the serve library
-// file ./lib/index.js
-// around line 52 you can modify port and address if needed
-
-server.listen( 3001, '0.0.0.0', null,
-        () => {
-          console.log( server.address() )
-          console.log( `http://${ server.address().address }:${ server.address().port }` )
-        }
-)
-```
 
 ___
 
@@ -105,9 +69,9 @@ npm run build-dev # this will watch for file changes and it will compile once sa
 
 # ℹ open another terminal
 
-npm run serve-dev
+npm run webpack-serve-dev
 
-# ℹ open your broser to http://localhost:3000 
+# ℹ open your browser to http://localhost:3000 
 
 ```
 
@@ -126,20 +90,30 @@ npx react-dang install --name='my-react-app' --directory='my-react-app'
 
 ```
 
-> ℹ react-dang deletes the module @react-dang/app completely from the hard drive.
+> ℹ react-dang deletes the module @react-dang/app completely from the node_modules directory.
 
 ```shell
 
 cd my-react-app
-npm run build-dev 
-# this will watch for file changes and it will compile once saved.
+npm run build-dev # this will watch for file changes and it will compile once saved.
 
 # ℹ open another terminal
-npm run serve-dev
+
+npm run webpack-serve-dev
 # ℹ open the browser at http://localhost:3000
 ```
 
 > ℹ The simplest usage `npx react-dang i`  
 > _It will generate the project-name and the directory_
+
 ___
 
+> ℹ @react-dang/app now use [Koorie](https://github.com/simonedelpopolo/koorie) as experimental server.
+___
+
+### JetBrains OSS License
+
+I want to thank JetBrains to grant me the Open Source Software license for all their products. This opportunity gives me strength to keep on going with my studies and personal project.  
+To learn more about this opportunity have a look at [Licenses for Open Source Development - Community Support](https://www.jetbrains.com/community/opensource/).
+
+_Thank you_

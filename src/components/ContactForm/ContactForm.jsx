@@ -85,8 +85,13 @@ class ContactForm extends Component{
         if( this.validate( this.state.name, this.state.email, this.state.body ) === true )
             console.log( 'errors' )
         else {
-            
-            const response = await fetch( 'http://127.0.0.1:2654/message', {
+    
+            const domain = window.location.hostname
+            const port = window.location.port
+    
+            const full = `http://${domain}:${port}`
+    
+            const response = await fetch( `${full}/message`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
