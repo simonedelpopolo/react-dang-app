@@ -4,13 +4,13 @@ import Npmjs from '../../template/images/npm-logo-red.svg'
 import React, { Component } from 'react'
 
 class Footer extends Component{
-    
+
     constructor( properties ) {
         super( properties )
     }
-    
+
     render() {
-        
+
         return (
             <>
                 <footer className={'footer'}>

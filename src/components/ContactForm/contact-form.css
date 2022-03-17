@@ -2,7 +2,6 @@ input{
     font-family: 'Raleway', sans-serif;
 }
 .contact-form{
-    border: 1px dotted rgba(98, 218, 251, 0.85);
     border-radius: 5px;
     width: 90%;
     margin: auto;
@@ -30,9 +29,6 @@ input{
 .styling-labels{
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
-    border: 1px solid rgba(31, 35, 42, 0.45);
-    background-color: rgba(98, 218, 251, 0.85);
-    color: rgba(31, 35, 42, 1);
     font-size: 1rem;
     height: 30px;
 }
@@ -40,9 +36,6 @@ input{
 .error-styling-labels{
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
-    border: 1px solid rgba(194, 207, 255, 0.45);
-    background-color: rgba(145, 0, 58, 0.85);
-    color: rgb(255, 255, 255);
     font-size: 1rem;
     height: 30px;
 }
@@ -51,36 +44,30 @@ input{
     height: 30px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    border: 1px solid rgba(31, 35, 42, 0.45);
 }
 
 .styling-text-area{
     height: 60px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    border: 1px solid rgba(31, 35, 42, 0.45);
 }
 
 .error-styling-inputs-text{
     height: 30px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    border: 1px double rgba(145, 0, 58, 0.85);
 }
 
 .error-styling-text-area{
     height: 60px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    border: 1px double rgba(145, 0, 58, 0.85);
 }
 
 .message-top{
     display: inline-block;
     padding: 1rem;
     border-radius: 3px;
-    background-color: rgba(40, 89, 0, 0.75);
-    color: rgb(255, 255, 255);
     width: 100%;
 }
 

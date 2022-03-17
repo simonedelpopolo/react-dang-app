@@ -6,5 +6,5 @@ ReactDOM.render(
     <React.StrictMode>
         <ReactDangApp />
     </React.StrictMode>,
-    document.getElementById( 'react-dang-app' )
+    document.getElementById( 'root' )
 )

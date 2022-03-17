@@ -19,7 +19,7 @@ export default web_pack = {
         'Footer': './src/components/Footer/Footer.jsx',
         'Header': './src/components/Header/Header.jsx',
         'Links': './src/components/Header/Links/Links.jsx',
-    
+
         // Runtime code for hot module replacement
         hot: 'webpack/hot/dev-server.js',
         // Dev server client for web socket transport, hot and live reload logic
@@ -103,7 +103,7 @@ export default web_pack = {
     },
     plugins: [
         new HtmlWebpackPlugin( {
-            title: 'React Dang App',
+            title: 'react basic application',
             // Load a custom template (lodash by default)
             template: './src/template/html/index.ejs',
             filename: resolve( __dirname, 'public/index.html' )

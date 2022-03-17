@@ -2,12 +2,12 @@ import ContactForm from './ContactForm/ContactForm.jsx'
 import React, { Component } from 'react'
 
 class Contacts extends Component{
-    
+
     constructor( props ) {
         super( props )
-        
+
     }
-    
+
     render() {
         return(
             <React.StrictMode>
@@ -20,9 +20,9 @@ class Contacts extends Component{
                         some options?
                     </aside>
                 </div>
-            
+
             </React.StrictMode>
-        
+
         )
     }
 }

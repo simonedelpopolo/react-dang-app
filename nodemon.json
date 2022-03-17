@@ -4,8 +4,20 @@
     "node_modules/**/node_modules",
     ".idea",
     "**/.DS_Store",
-    "**/*.md",
-    ".github"
+    "README.md",
+    ".git",
+    "assertions",
+    "koorie.log.json",
+    ".clinic",
+    ".eslintignore",
+    ".gitignore",
+    ".eslintrc.json",
+    ".npmignore",
+    "package.json",
+    "package-lock.json",
+    "LICENSE",
+    ".github",
+    "routes"
   ],
   "watch": [
     "./*",

@@ -93,7 +93,7 @@ export default web_pack = {
     },
     plugins: [
         new HtmlWebpackPlugin( {
-            title: 'React Dang App',
+            title: 'react basic application',
             // Load a custom template (lodash by default)
             template: './src/template/html/index.ejs',
             filename: resolve( __dirname, 'public/index.html' )

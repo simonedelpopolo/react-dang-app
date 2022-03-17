@@ -7,7 +7,7 @@ import React, { Component, Suspense } from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 class ReactDangApp extends Component{
-    
+
     render() {
         return (
             <React.StrictMode>

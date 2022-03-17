@@ -4,8 +4,5 @@ public/index.html
 .github/
 .gitignore
 .idea
-.npmrc
 .eslintrc
 .eslintignore
-/index.js
-/middleware.js
