@@ -6,3 +6,4 @@ public/index.html
 .idea
 .eslintrc
 .eslintignore
+.npmrc
