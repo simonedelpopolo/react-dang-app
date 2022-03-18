@@ -1,6 +1,6 @@
 {
   "name": "@react-dang/app",
-  "version": "1.3.5-alpha",
+  "version": "1.3.6-alpha",
   "description": "basic react-dang-app running on Koorie.",
   "main": "index.js",
   "type": "module",
@@ -47,7 +47,7 @@
     "boolean-jokes": "^1.5.1",
     "json-swiss-knife": "^1.6.10",
     "oftypes": "^0.7.0",
-    "koorie": "^1.7.9-experimental",
+    "koorie": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.2"
