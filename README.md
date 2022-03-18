@@ -8,7 +8,6 @@ ___
 
 - [Description](#description)
 - [Installation](#installation)
-  - [Manual](#manual)
   - [react-dang](#automated)
 - [JetBrains OSS Licence](#jetbrains-oss-license)
 
@@ -35,15 +34,12 @@ Available Components:
 - NotFound -> Handles 404
 - Contacts -> Handles the Contacts Page.
 - ContactForm -> Basic contact form. It is imported in the Contacts.
-  - ⚠ When using webpack serve function, it is necessary to project the business logic of it, in particular DB and server side. 
-  - ℹ When using the serve library, one route call message handles the fetch request from the ContactForm.
+  - ℹ When using the serve library, one route, called `message`, handles the fetch request from the ContactForm.
 - Footer -> Handles the footer shared between the web application pages.
 
 ___
 
 #### Installation
-
-##### Manual
 
 ```shell
 
@@ -79,7 +75,7 @@ npm run webpack-serve-dev
 
 ##### Automated
 
-It's possible to automate the installation using [react-dang](https://github.com/simonedelpopolo/react-dang/tree/v0.0.x)
+It's possible to automate the installation using [react-dang](https://github.com/simonedelpopolo/react-dang/)
 
 ```shell
 
@@ -103,8 +99,11 @@ npm run webpack-serve-dev
 # ℹ open the browser at http://localhost:3000
 ```
 
-> ℹ The simplest usage `npx react-dang i`  
-> _It will generate the project-name and the directory_
+> ℹ The simplest usage  
+> 
+> `npx react-dang install`
+> 
+> _It will give the project a and make the directory that will be the root of the project._
 
 ___
 
